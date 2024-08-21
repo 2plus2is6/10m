@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #e1e1e1;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #d9534f;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.timeline {
+    margin: 30px 0;
+    position: relative;
+}
+
+.event {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.date {
+    font-size: 1.5em;
+    background: #d9534f;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10px;
+    width: 100px;
+    text-align: center;
+    z-index: 1;
+}
+
+.description {
+    background-color: white;
+    border: 2px solid #d9534f;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    top: 40px;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.description h2 {
+    margin-top: 0;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.8em;
+    color: #d9534f;
+}
+
+.description p {
+    font-size: 1.2em;
+}
+
+.description img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.event:nth-child(odd) .description {
+    float: left;
+    clear: both;
+}
+
+.event:nth-child(even) .description {
+    float: right;
+    clear: both;
+}
+
+.description::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    border: 10px solid transparent;
+    border-bottom-color: #d9534f;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #d9534f;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-image: url('path_to_top_flower_image.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 20%;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-image: url('path_to_bottom_flower_image.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 20%;
+}
